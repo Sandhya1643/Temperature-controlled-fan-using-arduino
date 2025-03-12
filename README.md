@@ -22,25 +22,25 @@ void setup() {
   pinMode(FAN, OUTPUT);
   Serial.begin(9600);
 }
-
 void loop() {
   int sensorValue = analogRead(LM35);
   float temperature = sensorValue * (5.0 / 1023.0) * 100.0; // Convert to Celsius
-
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.println(" °C");
 
   if (temperature < 25) {
     analogWrite(FAN, 0);  // Fan OFF
-  } else if (temperature >= 25 && temperature < 30) {
+  }
+  else if (temperature >= 25 && temperature < 30) {
     analogWrite(FAN, 100);  // Low Speed
-  } else if (temperature >= 30 && temperature < 35) {
+  }
+  else if (temperature >= 30 && temperature < 35) {
     analogWrite(FAN, 180);  // Medium Speed
-  } else {
+  } 
+  else {
     analogWrite(FAN, 255);  // Full Speed
   }
-
   delay(1000);
 }
 
