@@ -51,16 +51,25 @@ void loop() {
   
     analogWrite(FAN, 255);  // Full Speed
   }
+  
   delay(1000);
+  
 }
 
 🎯 How It Works:
+
 The LM35 sensor measures temperature.
+
 The Arduino reads the temperature and determines the fan speed based on the conditions.
+
 A transistor acts as a switch, controlling the fan speed using PWM (Pulse Width Modulation).
+
 The fan adjusts speed automatically depending on the temperature.
 
 🚀 Enhancements:
+
 ✅ LCD Display – Show temperature readings.
+
 ✅ Relay Module – Control AC fans instead of DC fans.
+
 ✅ IoT Integration – Monitor and control the fan using a mobile app.
